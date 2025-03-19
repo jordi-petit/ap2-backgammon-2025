@@ -40,7 +40,7 @@ class DiceCup:
         self._seed = seed
 
     def roll(self) -> Dice:
-        return Dice(self._next() % 6 + 1, self._next() % 6 + 1)
+        return Dice((self._next() % 1009) % 6 + 1, (self._next() % 1009) % 6 + 1)
 
     def _next(self) -> int:
         self._seed = (self._a * self._seed + self._c) % self._m
